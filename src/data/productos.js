@@ -67,7 +67,7 @@ export const productos = [
 
         envio: true,
 
-        destacado: false
+        destacado: true
     },
 
     {
@@ -203,7 +203,9 @@ export const productos = [
 
         disponible: true,
 
-        envio: true
+        envio: true,
+
+        destacado: true
     },
     {
         id: 4,
@@ -259,7 +261,9 @@ export const productos = [
 
         disponible: true,
 
-        envio: true
+        envio: true,
+
+        destacado: true
     },
     {
         id: 5,

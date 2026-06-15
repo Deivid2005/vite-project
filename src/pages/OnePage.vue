@@ -262,7 +262,7 @@ Explora nuestro catálogo y encuentra calidad, diseño y personalidad en cada de
 <style scoped>
 
 .layout{
-    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -386,9 +386,7 @@ margin: 3px;
 
 
 .card h5{
-    background: linear-gradient(90deg, #ff3c00, #ffb700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #D6281E;
 }
 
 .card p{

@@ -45,6 +45,7 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #D6281E;
+  font-weight: bold;
 }
 
 .info p{

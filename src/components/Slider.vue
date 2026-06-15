@@ -232,7 +232,7 @@
     font-size: .9rem;
     font-weight: 600;
 
-    color: #ff3c00;
+    color: #D6281E;
 
     background: rgba(255,60,0,.1);
 
@@ -247,14 +247,8 @@
 
     margin-bottom: 20px;
 
-    background: linear-gradient(
-        90deg,
-        #ff3c00,
-        #ffb700
-    );
+    color:#D6281E;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .heroText p{
@@ -283,11 +277,7 @@
 
     color: white;
 
-    background: linear-gradient(
-        135deg,
-        #ff3c00,
-        #ffb700
-    );
+    background: #D6281E;
 
     font-weight: 600;
 
@@ -356,7 +346,7 @@
 
     border-radius: 50%;
 
-    background-color: #ff3c00 !important;
+    background-color: red !important;
 }
 
 @media (max-width: 768px){
