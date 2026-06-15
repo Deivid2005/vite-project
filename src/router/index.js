@@ -4,10 +4,10 @@ import Catalogo from "../pages/Catalogo.vue";
 import Caballero from "../pages/Caballero.vue";
 import Dama from "../pages/Dama.vue";
 import Infantil from "../pages/Infantil.vue";
-import Niño from "../pages/subcategorias/Niño.vue";
-import Niña from "../pages/subcategorias/Niña.vue";
 import DivisionInfantil from "../pages/subcategorias/DivisionInfantil.vue";
 import Producto from "../pages/Productos/Producto.vue";
+import Nina from "../pages/subcategorias/Nina.vue";
+import Nino from "../pages/subcategorias/Nino.vue";
 
 
 const router = createRouter({
@@ -44,14 +44,14 @@ const router = createRouter({
             component: DivisionInfantil
         },
         {
-            path: "/niño",
-            name: "niño",
-            component: Niño
+            path: "/nino",
+            name: "nino",
+            component: Nino
         },
         {
-            path: "/niña",
-            name: "niña",
-            component: Niña
+            path: "/nina",
+            name: "nina",
+            component: Nina
         },
         {
             path: '/producto/:id',

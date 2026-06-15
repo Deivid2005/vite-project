@@ -25,7 +25,7 @@ import Header from '../../components/Header.vue';
     <h3>Infantil Niño</h3>
   </div>
 
-    <router-link class="btn" :to="{name: 'niño'}">
+    <router-link class="btn" :to="{name: 'nino'}">
      →
   </router-link>
 </div>
@@ -37,7 +37,7 @@ import Header from '../../components/Header.vue';
     <h3>Infantil Niña</h3>
   </div>
 
-  <router-link class="btn" :to="{name: 'niña'}">
+  <router-link class="btn" :to="{name: 'nina'}">
      →
   </router-link>
 </div>

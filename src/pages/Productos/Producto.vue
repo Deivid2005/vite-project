@@ -19,7 +19,7 @@ const producto = productos.find(
 /*colores*/
 
 const colorSeleccionado = ref(
-    Object.keys(producto.variantes)[0]
+    producto.paletaPrincipal
 )
 
 const imagenesActivas = computed(() => {
@@ -27,6 +27,65 @@ const imagenesActivas = computed(() => {
         colorSeleccionado.value
     ].imagenes
 })
+
+/* Talla */
+
+const tallaSeleccionada = ref(null)
+
+const irWhatsapp = () => {
+
+    if (!tallaSeleccionada.value) {
+
+        alert('Por favor selecciona una talla')
+
+        return
+    }
+
+    window.open(
+
+        `https://wa.me/573174209327?text=${mensajeWhatsapp.value}`,
+
+        '_blank'
+    )
+
+}
+
+
+/* boton de whatsapp */
+
+const imagenActual = computed(() => {
+
+    return producto.paletas[
+        colorSeleccionado.value
+    ].imagen
+
+})
+
+const mensajeWhatsapp = computed(() => {
+
+    return encodeURIComponent(
+
+`Hola.
+
+Me interesa este producto:
+
+ID: ${producto.id}
+Categoría: ${producto.categoria}
+Color: ${colorSeleccionado.value}
+Talla: ${tallaSeleccionada.value ?? 'Sin seleccionar'}
+Precio: $${producto.precio.toLocaleString()}
+
+Referencia visual:
+${window.location.origin}${imagenActual.value}
+
+Producto:
+${window.location.origin}/producto/${producto.id}`
+
+    )
+
+})
+
+
 
 </script>
 
@@ -117,9 +176,6 @@ const imagenesActivas = computed(() => {
                  {{ producto.categoria }}
                 </p>
 
-                <h1 class="productName">
-                 {{ producto.nombre }}
-                </h1>
 
                 <h2 class="productPrice">
                  ${{ producto.precio.toLocaleString() }}
@@ -132,20 +188,37 @@ const imagenesActivas = computed(() => {
                         Colores
                     </span>
 
+                    
+
                     <div class="colors">
 
-                    <button
-                    v-for="(datos, color) in producto.variantes"
-                    :key="color"
-                    class="color-btn"
-                    @click="colorSeleccionado = color"
-                    >
-                    {{ color }}
-                    </button>
+    <button
+
+        v-for="(datos, color) in producto.paletas"
+
+        :key="color"
+
+        class="color-btn"
+
+        :class="{
+            active: colorSeleccionado === color
+        }"
+
+        :style="{
+            backgroundColor: datos.color
+        }"
+
+        @click="colorSeleccionado = color"
+
+        ></button>
+
+        
+
+         </div>
 
                     
 
-                    </div>
+                    
 
                   
 
@@ -169,13 +242,22 @@ const imagenesActivas = computed(() => {
                     <div class="tamaño">
 
                           <button
-                             v-for="talla in producto.tallas"
-                             :key="talla"
-                             class="size-btn"
-                             >
-                            {{ talla }}
-                        </button>
 
+                           v-for="talla in producto.tallas"
+
+                           :key="talla"
+
+                           class="size-btn"
+
+                          :class="{
+                           active: tallaSeleccionada === talla
+                           }"
+
+                          @click="tallaSeleccionada = talla"
+
+                         >
+                          {{ talla }}
+                         </button>
                     </div>
 
                 </div>
@@ -212,11 +294,25 @@ const imagenesActivas = computed(() => {
         </section>
 
         <!-- BOTÓN -->
-        <a href="#" class="whatsapp-btn" target="_blank">
+     <button
 
-            WhatsApp
+    class="whatsapp-btn"
 
-        </a>
+    :disabled="!tallaSeleccionada"
+
+    @click="irWhatsapp"
+
+
+
+>
+
+    {{
+        tallaSeleccionada
+        ? 'Solicitar por WhatsApp'
+        : 'Selecciona una talla'
+    }}
+
+</button>
 
     </main>
 
@@ -443,6 +539,11 @@ const imagenesActivas = computed(() => {
 .whatsapp-btn:hover{
     transform: translateX(-50%) translateY(-2px);
     box-shadow: 0 10px 25px rgba(212,175,55,.25);
+}
+
+.whatsapp-btn:disabled{
+    opacity: .6;
+    cursor: not-allowed;
 }
 
 /* RESPONSIVE */

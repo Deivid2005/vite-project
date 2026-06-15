@@ -6,16 +6,26 @@ export const productos = [
     {
         id: 1,
 
-
-        imagen: '/img/zapatoReferencia1.jpeg',
-
-        nombre: 'Tenis Running',
-
         categoria: 'Clasico',
 
         catalogo: 'Caballero',
 
         precio: 85000,
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/1.png'
+            },
+
+            Cafe:{
+                color: '#6F4E37',
+                imagen: '/src/zapatosCaballero/alt1.png'
+            }
+        } ,
 
         descripcion:
             'Zapato urbano cómodo y ligero ideal para uso diario y outfits casuales.',
@@ -23,7 +33,7 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/ejemplo.jpg',
+                '/zapatosCaballero/1.png',
                 '/img/ejemplo.jpg',
                 '/img/ejemplo.jpg'
             ]
@@ -63,20 +73,35 @@ export const productos = [
     {
         id: 2,
 
-        imagen: '/img/ejemplo.jpg',
+        imagen: '/src/zapatosCaballero/2.png',
 
-        nombre: 'Zapato Oxford',
+        categoria: 'Clasico',
 
-        categoria: 'Ejecutivo',
+        catalogo: 'Caballero',
 
-        precio: 180000,
+        precio: 90000,
 
         descripcion:
             'Zapato elegante ideal para reuniones y eventos formales.',
 
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/2.png'
+            },
+
+            Cafe:{
+                color: '#6F4E37',
+                imagen: '/src/zapatosCaballero/alt2.png'
+            }
+        } ,
+
         
         variantes: {
-        Azul: {
+        Negro: {
             imagenes: [
                 '/img/negro1.jpg',
                 '/img/negro2.jpg',
@@ -84,7 +109,7 @@ export const productos = [
             ]
         },
 
-        Amarillo: {
+        Cafe: {
             imagenes: [
                 '/img/rojo1.jpg',
                 '/img/rojo2.jpg',
@@ -97,157 +122,8 @@ export const productos = [
             39,
             40,
             41,
-            42
-        ],
-
-        caracteristicas: [
-            'Cuero sintético',
-            'Diseño formal',
-            'Plantilla acolchada'
-        ],
-
-        disponible: true,
-
-        envio: true
-    },
-    {
-        id: 3,
-
-        imagen: '/img/ejemplo.jpg',
-
-        nombre: 'Zapato Oxford',
-
-        categoria: 'Ejecutivo',
-
-        precio: 180000,
-
-        descripcion:
-            'Zapato elegante ideal para reuniones y eventos formales.',
-
-        
-        variantes: {
-        Azul: {
-            imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
-            ]
-        },
-
-        Amarillo: {
-            imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
-            ]
-        }
-    },
-
-        tallas: [
-            39,
-            40,
-            41,
-            42
-        ],
-
-        caracteristicas: [
-            'Cuero sintético',
-            'Diseño formal',
-            'Plantilla acolchada'
-        ],
-
-        disponible: true,
-
-        envio: true
-    },
-    {
-        id: 4,
-
-        imagen: '/img/ejemplo.jpg',
-
-        nombre: 'Zapato Oxford',
-
-        categoria: 'Ejecutivo',
-
-        precio: 180000,
-
-        descripcion:
-            'Zapato elegante ideal para reuniones y eventos formales.',
-
-        
-        variantes: {
-        Azul: {
-            imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
-            ]
-        },
-
-        Amarillo: {
-            imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
-            ]
-        }
-    },
-
-        tallas: [
-            39,
-            40,
-            41,
-            42
-        ],
-
-        caracteristicas: [
-            'Cuero sintético',
-            'Diseño formal',
-            'Plantilla acolchada'
-        ],
-
-        disponible: true,
-
-        envio: true
-    },
-    {
-        id: 5,
-
-        imagen: '/img/ejemplo.jpg',
-
-        nombre: 'Zapato Oxford',
-
-        categoria: 'Ejecutivo',
-
-        precio: 180000,
-
-        descripcion:
-            'Zapato elegante ideal para reuniones y eventos formales.',
-
-        
-        variantes: {
-        Azul: {
-            imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
-            ]
-        },
-
-        Amarillo: {
-            imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
-            ]
-        }
-    },
-
-        tallas: [
-            39,
-            40,
-            41,
-            42
+            42, 
+            43
         ],
 
         caracteristicas: [
@@ -263,22 +139,38 @@ export const productos = [
         destacado: true
     },
     {
-        id: 6,
+        id: 3,
 
-        imagen: '/img/ejemplo.jpg',
+        imagen: '/src/zapatosCaballero/3.png ',
 
-        nombre: 'Zapato Oxford',
+        categoria: 'Clasico',
+        
+        catalogo: 'Caballero',
 
-        categoria: 'Ejecutivo',
 
-        precio: 180000,
+        precio: 90000,
 
         descripcion:
             'Zapato elegante ideal para reuniones y eventos formales.',
 
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/3.png'
+            },
+
+            Cafe:{
+                color: '#6F4E37',
+                imagen: '/src/zapatosCaballero/alt3.png'
+            }
+        } ,
+
         
         variantes: {
-        Azul: {
+        Negro: {
             imagenes: [
                 '/img/negro1.jpg',
                 '/img/negro2.jpg',
@@ -286,7 +178,7 @@ export const productos = [
             ]
         },
 
-        Amarillo: {
+        Cafe: {
             imagenes: [
                 '/img/rojo1.jpg',
                 '/img/rojo2.jpg',
@@ -299,7 +191,189 @@ export const productos = [
             39,
             40,
             41,
-            42
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true
+    },
+    {
+        id: 4,
+
+        imagen: '/src/zapatosCaballero/4.png ',
+
+        categoria: 'Deportivo',
+
+        catalogo: 'Caballero',
+
+        precio: 75000,
+
+   
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/4.png'
+            },
+
+        } ,
+
+        
+        variantes: {
+        Negro: {
+            imagenes: [
+                '/img/negro1.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true
+    },
+    {
+        id: 5,
+
+        imagen: '/src/zapatosCaballero/5.png',
+
+        categoria: 'Deportivo',
+
+        catalogo: 'Caballero',
+
+        precio: 100000,
+
+      
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        paletaPrincipal: 'Azul',
+
+        paletas: {
+
+            Azul:{
+                color: '#1E3A8A',
+                imagen: '/src/zapatosCaballero/5.png'
+            },
+
+            Cafe:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/alt5.png'
+            }
+        } ,
+
+        
+        variantes: {
+        Azul: {
+            imagenes: [
+                '/img/negro1.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+
+        Negro: {
+            imagenes: [
+                '/img/rojo1.jpg',
+                '/img/rojo2.jpg',
+                '/img/rojo3.jpg'
+            ]
+        }
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true,
+
+        destacado: false
+    },
+    {
+        id: 6,
+
+        imagen: '/src/zapatosCaballero/6.png ',
+
+        categoria: 'Deportivo',
+
+        catalogo: 'Caballero',
+
+        precio: 75000,
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/6.png'
+            }
+
+        } ,
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        
+        variantes: {
+        Negro: {
+            imagenes: [
+                '/img/ejemplo.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
         ],
 
         caracteristicas: [
@@ -315,20 +389,37 @@ export const productos = [
     {
         id: 7,
 
-        imagen: '/img/ejemplo.jpg',
+        imagen: '/src/zapatosCaballero/7.png ',
 
-        nombre: 'Zapato Oxford',
+        categoria: 'Clasico',
 
-        categoria: 'Ejecutivo',
+        catalogo: 'Caballero',
 
-        precio: 180000,
+        precio: 85000,
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/7.png'
+            },
+
+            Cafe:{
+                color: '#6F4E37',
+                imagen: '/src/zapatosCaballero/alt7.png'
+            }
+        } ,
+
+        
 
         descripcion:
             'Zapato elegante ideal para reuniones y eventos formales.',
 
         
         variantes: {
-        Azul: {
+        Negro: {
             imagenes: [
                 '/img/negro1.jpg',
                 '/img/negro2.jpg',
@@ -336,7 +427,7 @@ export const productos = [
             ]
         },
 
-        Amarillo: {
+        Cafe: {
             imagenes: [
                 '/img/rojo1.jpg',
                 '/img/rojo2.jpg',
@@ -349,7 +440,8 @@ export const productos = [
             39,
             40,
             41,
-            42
+            42,
+            43
         ],
 
         caracteristicas: [
@@ -365,20 +457,36 @@ export const productos = [
     {
         id: 8,
 
-        imagen: '/img/ejemplo.jpg',
+        imagen: '/src/zapatosCaballero/8.png ',
 
-        nombre: 'Zapato Oxford',
+        categoria: 'Clasico',
 
-        categoria: 'Ejecutivo',
+        catalogo: 'Caballero',
 
-        precio: 180000,
+       
+        precio: 85000,
 
         descripcion:
             'Zapato elegante ideal para reuniones y eventos formales.',
 
         
+        paletaPrincipal: 'Miel',
+
+        paletas: {
+
+            Miel:{
+                color: '#B87333',
+                imagen: '/src/zapatosCaballero/8.png'
+            },
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/alt8.png'
+            }
+        } ,
+
         variantes: {
-        Azul: {
+        Miel: {
             imagenes: [
                 '/img/negro1.jpg',
                 '/img/negro2.jpg',
@@ -386,7 +494,7 @@ export const productos = [
             ]
         },
 
-        Amarillo: {
+        Negro: {
             imagenes: [
                 '/img/rojo1.jpg',
                 '/img/rojo2.jpg',
@@ -399,7 +507,211 @@ export const productos = [
             39,
             40,
             41,
-            42
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true
+    },
+    {
+        id: 9,
+
+        imagen: '/src/zapatosCaballero/9.png ',
+
+        categoria: 'Clasico',
+
+        catalogo: 'Caballero',
+
+        precio: 85000,
+
+       
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/9.png'
+            },
+
+            Cafe:{
+                color: '#B87333',
+                imagen: '/src/zapatosCaballero/alt9.png'
+            }
+        } ,
+
+        
+        variantes: {
+        Negro: {
+            imagenes: [
+                '/img/negro1.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+
+        Miel: {
+            imagenes: [
+                '/img/rojo1.jpg',
+                '/img/rojo2.jpg',
+                '/img/rojo3.jpg'
+            ]
+        }
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true
+    },
+    {
+        id: 10,
+
+        imagen: '/src/zapatosCaballero/10.png ',
+
+        categoria: 'Botas',
+
+        catalogo: 'Caballero',
+
+        precio: 100000,
+
+     
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        paletaPrincipal: 'Almendra',
+
+        paletas: {
+
+            Almendra:{
+                color: '#C19A6B',
+                imagen: '/src/zapatosCaballero/10.png'
+            },
+
+            Cafe:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/alt10.png'
+            }
+        } ,
+
+        
+        variantes: {
+        Almendra: {
+            imagenes: [
+                '/img/negro1.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+
+        Negro: {
+            imagenes: [
+                '/img/rojo1.jpg',
+                '/img/rojo2.jpg',
+                '/img/rojo3.jpg'
+            ]
+        }
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Cuero sintético',
+            'Diseño formal',
+            'Plantilla acolchada'
+        ],
+
+        disponible: true,
+
+        envio: true
+    },
+        {
+        id: 11,
+
+        imagen: '/src/zapatosCaballero/11.png',
+
+        categoria: 'Botas',
+
+        catalogo: 'Caballero',
+
+        precio: 90000,
+
+
+        descripcion:
+            'Zapato elegante ideal para reuniones y eventos formales.',
+
+        paletaPrincipal: 'Talco',
+
+        paletas: {
+
+            Talco:{
+                color: '#EDE6D6',
+                imagen: '/src/zapatosCaballero/11.png'
+            },
+
+            Cafe:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/alt1.png'
+            }
+        } ,
+
+        
+        variantes: {
+        Talco: {
+            imagenes: [
+                '/img/negro1.jpg',
+                '/img/negro2.jpg',
+                '/img/negro3.jpg'
+            ]
+        },
+
+        Negro: {
+            imagenes: [
+                '/img/rojo1.jpg',
+                '/img/rojo2.jpg',
+                '/img/rojo3.jpg'
+            ]
+        }
+    },
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
         ],
 
         caracteristicas: [
@@ -414,7 +726,7 @@ export const productos = [
     },
 
 
-    
+
 
     /* DAMA */
 
@@ -424,8 +736,6 @@ export const productos = [
 
         imagen: '/img/zapatoReferencia1.jpeg',
 
-        nombre: 'Dama 1',
-
         categoria: 'Deportivo',
 
         catalogo: 'Dama',
@@ -434,6 +744,17 @@ export const productos = [
 
         descripcion:
             'Zapato urbano cómodo y ligero ideal para uso diario y outfits casuales.',
+
+
+           paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/1.png'
+            },
+        },
 
         variantes: {
         Negro: {
@@ -471,6 +792,194 @@ export const productos = [
 
         envio: true,
 
-        destacado: true
-    }  
+        destacado: false
+    } , 
+
+
+
+    /* NIÑO */
+
+       {
+        id: 200,
+
+        catalogo: 'Niño',
+
+        categoria: 'Deportivo',
+
+        precio: 70000,
+
+        paletaPrincipal: 'Tiza',
+
+        paletas: {
+
+            Tiza:{
+                color: '#000000',
+                imagen: '#'
+            }
+
+        } ,
+
+        descripcion:
+            'Zapato urbano cómodo y ligero ideal para uso diario y outfits casuales.',
+
+        variantes: {
+        Tiza: {
+            imagenes: [
+                '#',
+                '/img/ejemplo.jpg',
+                '/img/ejemplo.jpg'
+            ]
+        },
+    },
+
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Material sintético premium',
+            'Suela antideslizante',
+            'Diseño casual y deportivo'
+        ],
+
+        disponible: true,
+
+        envio: true,
+
+        destacado: false
+    },
+       {
+        id: 201,
+
+        catalogo: 'Niño',
+
+        categoria: 'Deportivo',
+
+        precio: 70000,
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#361c1c',
+                imagen: '/src/zapatosCaballero/1.png'
+            },
+        } ,
+
+        descripcion:
+            'Zapato urbano cómodo y ligero ideal para uso diario y outfits casuales.',
+
+        variantes: {
+        Negro: {
+            imagenes: [
+                '/zapatosCaballero/1.png',
+                '/img/ejemplo.jpg',
+                '/img/ejemplo.jpg'
+            ]
+        },
+
+       
+    },
+
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Material sintético premium',
+            'Suela antideslizante',
+            'Diseño casual y deportivo'
+        ],
+
+        disponible: true,
+
+        envio: true,
+
+        destacado: false
+    },
+
+
+
+
+
+
+    /* NIÑA */
+
+       {
+        id: 300,
+
+        catalogo: 'Niña',
+
+        categoria: 'Sandalia',
+
+        precio: 85000,
+
+        paletaPrincipal: 'Negro',
+
+        paletas: {
+
+            Negro:{
+                color: '#000000',
+                imagen: '/src/zapatosCaballero/1.png'
+            },
+
+            Cafe:{
+                color: '#6F4E37',
+                imagen: '/src/zapatosCaballero/alt1.png'
+            }
+        } ,
+
+        descripcion:
+            'Zapato urbano cómodo y ligero ideal para uso diario y outfits casuales.',
+
+        variantes: {
+        Negro: {
+            imagenes: [
+                '/zapatosCaballero/1.png',
+                '/img/ejemplo.jpg',
+                '/img/ejemplo.jpg'
+            ]
+        },
+
+        Cafe: {
+            imagenes: [
+                '/img/zapatoReferencia1.jpeg',
+                '/img/zapatoReferencia1.jpeg',
+                '/img/zapatoReferencia1.jpeg'
+            ]
+        }
+    },
+
+
+        tallas: [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+
+        caracteristicas: [
+            'Material sintético premium',
+            'Suela antideslizante',
+            'Diseño casual y deportivo'
+        ],
+
+        disponible: true,
+
+        envio: true,
+
+        destacado: false
+    }
 ]

@@ -2,68 +2,117 @@
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 import Ubicacion from '../components/Ubicacion.vue';
-import Logos from '../components/logos.vue';
+import Logos from '../components/Logos.vue'
 import Slider from '../components/Slider.vue';
 
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
-import { productos } from '../data/productos.js';
+import { productos } from '../data/productos.js'
 
-const indiceActual = ref(0);
-const anchoPantalla = ref(window.innerWidth);
+
+const colorSeleccionado = ref({})
+
+productos.forEach(producto => {
+
+    if (producto.paletaPrincipal) {
+
+        colorSeleccionado.value[producto.id] =
+            producto.paletaPrincipal
+
+    }
+
+})
+
+const indiceActual = ref(0)
+
+const anchoPantalla = ref(window.innerWidth)
 
 const actualizarAncho = () => {
-  anchoPantalla.value = window.innerWidth;
-};
+    anchoPantalla.value = window.innerWidth
+}
 
 onMounted(() => {
-  window.addEventListener('resize', actualizarAncho);
-});
+    window.addEventListener(
+        'resize',
+        actualizarAncho
+    )
+})
 
 onUnmounted(() => {
-  window.removeEventListener('resize', actualizarAncho);
-});
+    window.removeEventListener(
+        'resize',
+        actualizarAncho
+    )
+})
 
 const productosPorPagina = computed(() => {
-  return anchoPantalla.value <= 768 ? 3 : 4;
-});
+
+    return anchoPantalla.value <= 768
+        ? 3
+        : 4
+
+})
 
 const productosDestacados = computed(() => {
-  return productos.filter(
-    producto => producto.destacado
-  )
+
+    return productos.filter(
+        producto => producto.destacado
+    )
+
 })
 
 const productosVisibles = computed(() => {
-  return productosDestacados.value.slice(
-    indiceActual.value,
-    indiceActual.value + productosPorPagina.value
-  );
-});
+
+    return productosDestacados.value.slice(
+        indiceActual.value,
+        indiceActual.value + productosPorPagina.value
+    )
+
+})
 
 const siguiente = () => {
-  const cantidad = productosPorPagina.value;
 
-   if (
-  indiceActual.value + cantidad <
-  productosDestacados.value.length)
-  {
-    indiceActual.value += cantidad;
-  } else {
-    indiceActual.value = 0;
-  }
-};
+    const cantidad =
+        productosPorPagina.value
+
+    if (
+        indiceActual.value + cantidad <
+        productosDestacados.value.length
+    ) {
+
+        indiceActual.value += cantidad
+
+    } else {
+
+        indiceActual.value = 0
+
+    }
+
+}
 
 const anterior = () => {
-  const cantidad = productosPorPagina.value;
 
-  if (indiceActual.value - cantidad >= 0) {
-    indiceActual.value -= cantidad;
-  } else {
-    indiceActual.value =
-  productosDestacados.value.length - cantidad;
-  }
-};
+    const cantidad =
+        productosPorPagina.value
+
+    if (
+        indiceActual.value - cantidad >= 0
+    ) {
+
+        indiceActual.value -= cantidad
+
+    } else {
+
+        indiceActual.value =
+            Math.max(
+                0,
+                productosDestacados.value.length -
+                cantidad
+            )
+
+    }
+
+}
 </script>
 
 <template>
@@ -88,36 +137,80 @@ const anterior = () => {
 
 
     <div
-      v-for="producto in productosVisibles"
-      :key="producto.id"
-      class="card"
-    >
-      <img
-        :src="producto.imagen"
-        class="card-img-top"
-        :alt="producto.nombre"
-      >
+  v-for="producto in productosVisibles"
+  :key="producto.id"
+  class="card"
+>
 
-      <div class="card-body">
-        <h5 class="card-title">
-          {{ producto.nombre }}
-        </h5>
+  <img
 
-        <p class="card-text">
-          {{ producto.descripcion }}
-        </p>
+    :src="
+    producto.paletas[
+    colorSeleccionado[producto.id]
+    ]?.imagen
+    "
 
-        <router-link
-        class="btn"
-        :to="{
-        name: 'producto',
-        params: { id: producto.id }
+    class="card-img-top"
+
+    :alt="producto.categoria"
+
+  >
+
+  <div class="card-body">
+
+    <h5 class="card-title">
+      {{ producto.categoria }}
+    </h5>
+
+    <p class="precio">
+      ${{ producto.precio.toLocaleString() }}
+    </p>
+
+    <div class="mini-paletas">
+
+    <button
+
+        v-for="(datos, color) in producto.paletas"
+
+        :key="color"
+
+        class="mini-color"
+
+        :class="{
+            activo:
+            colorSeleccionado[producto.id] === color
         }"
-         >
-          Ver aquí
-         </router-link>
-      </div>
-    </div>
+
+        :style="{
+            backgroundColor: datos.color
+        }"
+
+        @click="
+            colorSeleccionado[producto.id] = color
+        "
+
+    ></button>
+
+</div>
+
+    <router-link
+
+      class="btn"
+
+      :to="{
+        name: 'producto',
+        params: {
+          id: producto.id
+        }
+      }"
+
+    >
+      Ver aquí
+    </router-link>
+
+  </div>
+
+</div>
 
   
 
@@ -168,173 +261,6 @@ Explora nuestro catálogo y encuentra calidad, diseño y personalidad en cada de
 
 <style scoped>
 
-/*
-.layout{
-min-height: 100vh;
-margin: 0;
-padding:0;
- display: flex;
-flex-direction: column;
-}
-
-main{
-  
-   flex: 1;
-}
-
-.slider{
-   padding: 100px;
-}
-
-.titleDestacado{
-   text-align: center;
-   background: linear-gradient(90deg, #ff3c00, #ffb700);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   font-weight: bold;
-   padding: 20px;
-}
-
-.destacado{
-   display: flex;
-   justify-content: center;
-   gap: 25px;
-   flex-wrap: nowrap;
-
-}
-
-.contenedorDestacado{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 20px;
-   width: 100%;
-}
-
-.flecha{
-   width: 50px;
-   height: 50px;
-
-   border: none;
-   border-radius: 50%;
-
-   cursor: pointer;
-
-   font-size: 24px;
-   font-weight: bold;
-
-   color: white;
-
-   background: linear-gradient(
-      135deg,
-      #ff3c00,
-      #ffb700
-   );
-
-   transition: .3s;
-}
-
-.flecha:hover{
-   transform: scale(1.1);
-
-   box-shadow:
-      0 0 15px rgba(255,183,0,.5),
-      0 0 25px rgba(255,60,0,.3);
-}
-
-.card{
-    box-shadow: 0 8px 10px rgba(255, 60, 0, 0.18),
-        0 0 20px rgba(255, 170, 0, 0.12);
-
-    border: 1px solid rgba(255, 140, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card h5{
-   background: linear-gradient(90deg, #ff3c00, #ffb700);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-
-}
-
-.card p{
-  color: black;
-}
-
-.card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.2);
-}
-
-.btn{
-   border: 1px solid rgba(255, 140, 0, 0.15);
-   padding: 10px 20px;
-   border-radius: 8px;
-   cursor: pointer;
-   text-decoration: none;
-   background: linear-gradient(135deg, #0f0f0f, #1a1a1a) ;
-   color: white;
-}
-
-.btn:hover{
-   transform: scale(1.05);
-   box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.2);
-
-}
-
-.presentacionCatalogo{
-   display: flex;
-   width: 100%;
-   height: 400px;
-   justify-content: center;
-   align-items: center;
-   background-image: url(/img/fondo.png);
-   background-repeat: no-repeat; 
-   background-size: cover; 
-   background-position: center center; 
-   margin-top: 30px;
-}
-
-.textPresentacion{
-   background: transparent;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   
-}
-
-.textFont{
-   background: transparent;
-   background: linear-gradient(90deg, #ff3c00, #ffb700);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   font-weight: bold;
-}
-
-.ingresoCatalogo{
-border: 1px solid rgba(255, 140, 0, 0.15);
-padding: 10px 20px;
-border-radius: 8px;
-cursor: pointer;
-color:white;
-background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-text-decoration: none;
-}
-
-.ingresoCatalogo:hover{
-   transform: scale(1.05);
-   box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.2);
-}
-
-.caja{
-   background: transparent;
-   display: flex;
-   justify-content: center;
-}
-
-*/
-
 .layout{
     min-height: 100vh;
     margin: 0;
@@ -364,7 +290,15 @@ main{
 .destacado{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
+    width: 100%;
+}
+
+.inlineIcon{
+ display: flex;
+ justify-content: center;
+margin: 3px;
+
 }
 
 .contenedorDestacado{
@@ -395,6 +329,41 @@ main{
         0 0 25px rgba(255,60,0,.3);
 }
 
+.precio{
+    color: #c62828;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.mini-paletas{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.mini-color{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mini-color:hover{
+    transform: scale(1.15);
+}
+
+.mini-color.activo{
+    transform: scale(1.25);
+    border: 2px solid #000;
+}
+
+.card-body{
+    text-align: center;
+}
+
 .card{
     text-align: center;
     border: 1px solid rgba(255, 140, 0, 0.15);
@@ -402,7 +371,13 @@ main{
         0 8px 10px rgba(255, 60, 0, 0.18),
         0 0 20px rgba(255, 170, 0, 0.12);
     transition: transform .3s ease, box-shadow .3s ease;
+    border-radius: 12px;
+    width: 240px;
+    flex-shrink: 0;
+
 }
+
+
 
 .card h5{
     background: linear-gradient(90deg, #ff3c00, #ffb700);
@@ -412,11 +387,20 @@ main{
 
 .card p{
     color: black;
+    margin-left: 5px;
+    margin-bottom: 10px;
 }
 
 .card:hover{
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.card-img-top{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    padding: 10px;
 }
 
 .btn,
@@ -484,14 +468,15 @@ main{
     }
 
     .card{
-        width: 30%;
-        min-width: 100px;
+    width: calc((100% - 20px) / 3);
+    min-width: 0;
+        
+      
     }
 
-    .card-img-top{
-        height: 120px;
-        object-fit: cover;
-    }
+   .card-img-top{
+    height: 140px;
+}
 
     .card h5{
         font-size: 0.9rem;
@@ -500,6 +485,7 @@ main{
     .card p{
         font-size: 0.75rem;
         margin-bottom: 10px;
+        
     }
 
     .btn{

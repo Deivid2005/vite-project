@@ -14,7 +14,7 @@
                     <div class="heroText">
 
                         <span class="heroEtiqueta">
-                            Nueva colección
+                            Visitanos
                         </span>
 
                         <h1>
@@ -121,13 +121,14 @@
                         </span>
 
                         <h1>
-                            La mejor selección
-                            para tu guardarropa
+                            Calzado que combina
+                            estilo y comodidad
                         </h1>
 
                         <p>
-                            Materiales resistentes y acabados que marcan
-                            la diferencia.
+                            Descubre nuestros modelos más destacados. 
+                            Calidad, diseño y confort
+                            para cada ocasión.
                         </p>
 
                         <div class="heroBotones">

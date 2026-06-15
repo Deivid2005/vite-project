@@ -3,12 +3,19 @@ import Footer from '../components/Footer.vue';
 import Header from '../components/Header.vue';
 import botonWhatsapp from '../components/botonWhatsapp.vue';
 
+import { ref, computed } from 'vue';
 
-import { ref, computed } from 'vue'
+import { productos } from '../data/productos';
 
-import { productos } from '../data/productos'
+const filtroActivo = ref('Todos');
 
-const filtroActivo = ref('Todos')
+const colorSeleccionado = ref({});
+
+productos.forEach(producto => {
+    colorSeleccionado.value[producto.id] =
+        producto.paletaPrincipal
+})
+
 
 const categorias = [
     'Todos',
@@ -16,9 +23,7 @@ const categorias = [
     'Clasico',
     'Ejecutivo',
     'Botas'
-]
-
-
+];
 
 const productosFiltrados = computed(() => {
 
@@ -35,84 +40,136 @@ const productosFiltrados = computed(() => {
     );
 
 });
-
 </script>
 
 <template>
 
 <div class="layout">
 
-        <Header/>
+    <Header />
 
-        <main>
-   <div class="catalogo">
+    <main>
 
-    <div class="filtros">
-        <button
-            v-for="categoria in categorias"
-            :key="categoria"
-            @click="filtroActivo = categoria"
-            :class="{ activo: filtroActivo === categoria }"
-        >
-            {{ categoria }}
-        </button>
-    </div>
+        <div class="catalogo">
 
-    <div class="productos">
+            <!-- FILTROS -->
 
-        <div
-            v-for="producto in productosFiltrados"
-            :key="producto.id"
-            class="producto"
-        >
+            <div class="filtros">
 
-         <img
-                :src="producto.imagen"
-                :alt="producto.nombre"
-            >
+                <button
+                    v-for="categoria in categorias"
+                    :key="categoria"
+                    @click="filtroActivo = categoria"
+                    :class="{ activo: filtroActivo === categoria }"
+                >
+                    {{ categoria }}
+                </button>
 
-            <span class="etiqueta">
-                {{ producto.categoria }}
-            </span>
+            </div>
 
-           
+            <!-- PRODUCTOS -->
 
-            <h3>{{ producto.nombre }}</h3>
+            <div class="productos">
 
-            <p class="precio">
-                ${{ producto.precio.toLocaleString() }}
-            </p>
+                <div
+                    v-for="producto in productosFiltrados"
+                    :key="producto.id"
+                    class="producto"
+                >
 
-            <button class="btn">
-                <router-link
-    class="btn"
-    :to="{
-        name: 'producto',
-        params: { id: producto.id }
+                    <!-- IMAGEN -->
+
+                    <img
+
+                        v-if="
+                            producto.paletas &&
+                            colorSeleccionado[producto.id]
+                        "
+
+                        :src="
+                            producto.paletas[
+                                colorSeleccionado[producto.id]
+                            ]?.imagen
+                        "
+
+                        :alt="producto.nombre"
+                    >
+
+                    <!-- ETIQUETA -->
+
+                    <span class="etiqueta">
+                        {{ producto.categoria }}
+                    </span>
+
+                    <!-- PALETAS -->
+
+                    <div
+                        class="paletas"
+                        v-if="producto.paletas"
+                    >
+
+                       <button
+    v-for="(datos, color) in producto.paletas"
+    :key="color"
+
+    class="color-circle"
+
+    :class="{
+        activo:
+        colorSeleccionado[producto.id] === color
     }"
->
-    Ver aquí
-</router-link>
-            </button>
+
+    :style="{
+        backgroundColor: datos.color
+    }"
+
+    @click="
+        colorSeleccionado[producto.id] = color
+    "
+></button>
+
+                    </div>
+
+                    <!-- PRECIO -->
+
+                    <p class="precio">
+                        ${{ producto.precio.toLocaleString() }}
+                    </p>
+
+                    <!-- BOTÓN -->
+
+                    <router-link
+
+                        class="btn"
+
+                        :to="{
+                            name: 'producto',
+                            params: {
+                                id: producto.id
+                            }
+                        }"
+                    >
+
+                        Ver aquí
+
+                    </router-link>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </main>
 
- </div>
-        
+    <Footer />
 
-
-        </main>
-
-        <Footer/>
-
-
-    </div>
+</div>
 
 <botonWhatsapp />
 
 </template>
+
 
 
 <style scoped>
@@ -176,7 +233,21 @@ main{
     position: relative;
     transition: .3s;
     width: 250px;
+    /*
+    transform: translateX(-100px);
+    animation: aparecer 0.8s ease-out forwards;
+    */
 }
+
+
+/* ANIMACIÓN 
+@keyframes aparecer {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+*/
 
 .producto:hover{
     transform: translateY(-5px);
@@ -188,8 +259,11 @@ main{
     object-fit: cover;
 }
 
-.producto h3{
+.producto h5{
     padding: .5rem 1rem;
+    color: #ff3c00;
+    text-align: center;
+   
 }
 
 .precio{
@@ -213,13 +287,66 @@ main{
 .btn{
     margin: 1rem;
     width: calc(100% - 2rem);
-    padding: .9rem;
+    padding: .3rem;
     border: none;
     border-radius: 10px;
     background: #c62828;
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+.btn:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    background: #c63828;
+}
+
+.paletas{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color-circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.color-circle:hover{
+    transform: scale(1.15);
+}
+
+.color-circle.activo{
+    transform: scale(1.25);
+    border: 3px solid #000;
+}
+
+
+@media (max-width: 768px){
+
+
+.producto{
+    width: 180px;
+    
+}
+
+
+
+.producto img{
+    height: 200px;
+}
+
+.btn{
+    padding: .1rem;
+}
+
+
+
 }
 
 </style>
