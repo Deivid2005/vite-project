@@ -125,7 +125,7 @@ const anterior = () => {
 
  <main>
 
-  <h1 class="titleDestacado">Destacado</h1>
+  <h1 class="titleDestacado">DESTACADO</h1>
 
 <section class="contenedorDestacado">
 
@@ -243,7 +243,7 @@ Explora nuestro catálogo y encuentra calidad, diseño y personalidad en cada de
  
  </main>
 
- <h1 class="titleDestacado">Visita nuestras redes</h1>
+ <h1 class="titleDestacado">VISITA NUESTRAS REDES</h1>
  <p class="textoLogos">Ingresa a 
   nuestras redes y 
   enterate de todas 
@@ -276,9 +276,10 @@ main{
 
 .titleDestacado,
 .textFont{
-    background: linear-gradient(90deg, #ff3c00, #ffb700);
+    /*background: linear-gradient(90deg, #ff3c00, #ffb700);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;+*/
+    color: #D6281E;
     font-weight: bold;
 }
 
@@ -318,7 +319,7 @@ margin: 3px;
     font-size: 24px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(135deg, #ff3c00, #ffb700);
+    background: #D6281E;
     transition: .3s;
 }
 
