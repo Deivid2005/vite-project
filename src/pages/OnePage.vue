@@ -331,7 +331,7 @@ margin: 3px;
 }
 
 .precio{
-    color: #c62828;
+    color: #D6281E;
     font-weight: bold;
     margin-bottom: 12px;
 }

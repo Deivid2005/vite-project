@@ -1,7 +1,7 @@
 <template>
   <section class="location-section">
     <div class="info">
-      <h2>Nuestra ubicación</h2>
+      <h2>NUESTRA UBICACION</h2>
 
       <p>
         Visita nuestro almacén y conoce todos nuestros productos.
@@ -44,9 +44,7 @@
 .info h2{
   font-size: 3rem;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #ff3c00, #ffb700);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D6281E;
 }
 
 .info p{
