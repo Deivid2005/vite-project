@@ -225,7 +225,7 @@ const anterior = () => {
 <section class="presentacionCatalogo">
 
    <div class="textPresentacion">
-      <p class="textFont">Descubre el estilo que marcará la diferencia.
+      <p class="textFont2">Descubre el estilo que marcará la diferencia.
 Explora nuestro catálogo y encuentra calidad, diseño y personalidad en cada detalle.
       </p>
 
@@ -281,6 +281,11 @@ main{
     -webkit-text-fill-color: transparent;+*/
     color: #D6281E;
     font-weight: bold;
+}
+
+.textFont2{
+    font-weight: bold;
+    color: #ddd;
 }
 
 .titleDestacado{
