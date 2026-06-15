@@ -62,7 +62,7 @@
   border-radius: 24px;
   overflow: hidden;
 
-  box-shadow: 0 10px 40px rgba(255, 179, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(214, 40, 30, 0.25);
 }
 
 iframe{

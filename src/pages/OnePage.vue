@@ -373,9 +373,7 @@ margin: 3px;
 .card{
     text-align: center;
     border: 1px solid rgba(255, 140, 0, 0.15);
-    box-shadow:
-        0 8px 10px rgba(255, 60, 0, 0.18),
-        0 0 20px rgba(255, 170, 0, 0.12);
+    box-shadow: 0 6px 18px rgba(214, 40, 30, 0.25);
     transition: transform .3s ease, box-shadow .3s ease;
     border-radius: 12px;
     width: 240px;
@@ -397,7 +395,7 @@ margin: 3px;
 
 .card:hover{
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 12px 28px rgba(214, 40, 30, 0.35);
 }
 
 .card-img-top{

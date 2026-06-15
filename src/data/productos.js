@@ -18,12 +18,12 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/1.png'
+                imagen: '/zapatosCaballero/1.png'
             },
 
             Cafe:{
                 color: '#6F4E37',
-                imagen: '/src/zapatosCaballero/alt1.png'
+                imagen: '/zapatosCaballero/alt1.png'
             }
         } ,
 
@@ -73,8 +73,6 @@ export const productos = [
     {
         id: 2,
 
-        imagen: '/src/zapatosCaballero/2.png',
-
         categoria: 'Clasico',
 
         catalogo: 'Caballero',
@@ -90,12 +88,12 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/2.png'
+                imagen: '/zapatosCaballero/2.png'
             },
 
             Cafe:{
                 color: '#6F4E37',
-                imagen: '/src/zapatosCaballero/alt2.png'
+                imagen: '/zapatosCaballero/alt2.png'
             }
         } ,
 
@@ -141,8 +139,6 @@ export const productos = [
     {
         id: 3,
 
-        imagen: '/src/zapatosCaballero/3.png ',
-
         categoria: 'Clasico',
         
         catalogo: 'Caballero',
@@ -159,12 +155,12 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/3.png'
+                imagen: '/zapatosCaballero/3.png'
             },
 
             Cafe:{
                 color: '#6F4E37',
-                imagen: '/src/zapatosCaballero/alt3.png'
+                imagen: '/zapatosCaballero/alt3.png'
             }
         } ,
 
@@ -229,7 +225,7 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/4.png'
+                imagen: '/zapatosCaballero/4.png'
             },
 
         } ,
@@ -287,12 +283,12 @@ export const productos = [
 
             Azul:{
                 color: '#1E3A8A',
-                imagen: '/src/zapatosCaballero/5.png'
+                imagen: '/zapatosCaballero/5.png'
             },
 
             Cafe:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/alt5.png'
+                imagen: '/zapatosCaballero/alt5.png'
             }
         } ,
 
@@ -333,7 +329,7 @@ export const productos = [
 
         envio: true,
 
-        destacado: false
+        destacado: true
     },
     {
         id: 6,
@@ -352,7 +348,7 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/6.png'
+                imagen: '/zapatosCaballero/6.png'
             }
 
         } ,
@@ -407,12 +403,12 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/7.png'
+                imagen: '/zapatosCaballero/7.png'
             },
 
             Cafe:{
                 color: '#6F4E37',
-                imagen: '/src/zapatosCaballero/alt7.png'
+                imagen: '/zapatosCaballero/alt7.png'
             }
         } ,
 
@@ -480,12 +476,12 @@ export const productos = [
 
             Miel:{
                 color: '#B87333',
-                imagen: '/src/zapatosCaballero/8.png'
+                imagen: '/zapatosCaballero/8.png'
             },
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/alt8.png'
+                imagen: '/zapatosCaballero/alt8.png'
             }
         } ,
 
@@ -547,12 +543,12 @@ export const productos = [
 
             Negro:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/9.png'
+                imagen: '/zapatosCaballero/9.png'
             },
 
             Cafe:{
                 color: '#B87333',
-                imagen: '/src/zapatosCaballero/alt9.png'
+                imagen: '/zapatosCaballero/alt9.png'
             }
         } ,
 
@@ -615,12 +611,12 @@ export const productos = [
 
             Almendra:{
                 color: '#C19A6B',
-                imagen: '/src/zapatosCaballero/10.png'
+                imagen: '/zapatosCaballero/10.png'
             },
 
             Cafe:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/alt10.png'
+                imagen: '/zapatosCaballero/alt10.png'
             }
         } ,
 
@@ -682,12 +678,12 @@ export const productos = [
 
             Talco:{
                 color: '#EDE6D6',
-                imagen: '/src/zapatosCaballero/11.png'
+                imagen: '/zapatosCaballero/11.png'
             },
 
             Cafe:{
                 color: '#000000',
-                imagen: '/src/zapatosCaballero/alt1.png'
+                imagen: '/zapatosCaballero/alt1.png'
             }
         } ,
 

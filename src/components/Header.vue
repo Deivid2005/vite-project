@@ -13,7 +13,8 @@
 header{
     background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
     padding: 15px;
-    box-shadow: 0px 2px 10px rgba(255, 80, 0, 0.45);
+    /*box-shadow: 0px 6px 18px rgba(214, 40, 30, 0.55);*/
+    box-shadow: 0 2px 12px rgba(214, 40, 30, 0.15);
     width: 100%;
     position: sticky;
     top: 0;
