@@ -1,7 +1,7 @@
 <template>
 
 <footer>
-    <p class="textoFooter">&copy 2026 Todos los derechos reservados a <span>El punto del calzado</span></p>
+    <p class="textoFooter">&copy 2026 Todos los derechos reservados a <span>El Punto Del Calzado Palmira</span></p>
 </footer>
 
 </template>
