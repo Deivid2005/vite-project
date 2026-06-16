@@ -48,7 +48,7 @@ onUnmounted(() => {
 const productosPorPagina = computed(() => {
 
     return anchoPantalla.value <= 768
-        ? 3
+        ? 2
         : 4
 
 })
@@ -458,6 +458,7 @@ margin: 3px;
     .titleDestacado{
         font-size: 1.8rem;
         padding: 15px;
+        margin-top: 3px;
     }
 
     .contenedorDestacado{
@@ -465,13 +466,11 @@ margin: 3px;
     }
 
     .destacado{
-        gap: 6px;
-        flex: 1;
+        gap: 10px;
     }
 
     .card{
-        width: calc((100% - 12px) / 3);
-        min-width: 0;
+        width: calc(50% - 5px);
     }
 
     .card-img-top{
