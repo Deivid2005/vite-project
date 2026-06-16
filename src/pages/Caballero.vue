@@ -177,6 +177,7 @@ const productosFiltrados = computed(() => {
 .layout{
     margin: 0;
     padding: 0;
+    display: flex;
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -330,11 +331,15 @@ main{
 @media (max-width: 768px){
 
 
-.producto{
-    width: 180px;
-    
-}
+  .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
+    .producto{
+        width: 100%;
+    }
 
 
 .producto img{
