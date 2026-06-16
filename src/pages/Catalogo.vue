@@ -22,7 +22,7 @@ import BotonWhatsapp from '../components/botonWhatsapp.vue';
   <img src="../referencia/Caballero.jpeg" alt="producto">
 
   <div class="contenido">
-    <h3>Calzado Caballero</h3>
+    <h3>CALZADO CABALLERO</h3>
     <p>Clasico, deportivo, ejecutivo, botas</p>
   </div>
 
@@ -35,7 +35,7 @@ import BotonWhatsapp from '../components/botonWhatsapp.vue';
   <img src="../referencia/Dama.jpeg" alt="producto">
 
   <div class="contenido">
-    <h3>Calzado Dama</h3>
+    <h3>CALZADO DAMA</h3>
     <p>Deportivas, vans, baletas, sandalias, plataformas, tacones</p>
   </div>
 
@@ -48,7 +48,7 @@ import BotonWhatsapp from '../components/botonWhatsapp.vue';
   <img src="../referencia/Infantil.jpeg" alt="producto">
 
   <div class="contenido">
-    <h3>Calzado Infantil</h3>
+    <h3>CALZADO INFANTIL</h3>
     <p>Deportivo, sandalias</p>
   </div>
 
@@ -147,9 +147,7 @@ flex-direction: column;
 }
 
 .contenido h3{
-  background: linear-gradient(90deg, #ff3c00, #ffb700);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  color: #D6281E;
    font-weight: bold;
   font-size:1.5rem;
   margin:0;
@@ -167,8 +165,8 @@ flex-direction: column;
   border:none;
   border-radius:50%;
 
-  background:rgba(255, 196, 0, 0.15);
-  color:#d4af37;
+  background: #222222;
+  color: #D6281E;
 
   font-size:1.5rem;
   cursor:pointer;
@@ -229,7 +227,7 @@ flex-direction: column;
 }
 
 .contenido h3{
-  color:white;
+  color:#D6281E;
   font-size:1.2rem;
   margin:0;
   font-weight:700;
@@ -245,9 +243,12 @@ flex-direction: column;
   height:55px;
   border:none;
   border-radius:50%;
-
+/*
   background:rgba(255, 196, 0, 0.15);
   color:#d4af37;
+  */
+  background: #0f0f0f;
+  color: #D6281E;
  margin:0;
  flex-shrink:0;
   font-size:1.5rem;

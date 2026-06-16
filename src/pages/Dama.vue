@@ -332,12 +332,15 @@ main{
 @media (max-width: 768px){
 
 
-.producto{
-    width: 180px;
-    
-}
+  .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
-
+    .producto{
+        width: 100%;
+    }
 
 .producto img{
     height: 200px;

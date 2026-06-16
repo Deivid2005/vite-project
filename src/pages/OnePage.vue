@@ -461,6 +461,26 @@ margin: 3px;
     }
 
     .contenedorDestacado{
+        gap: 4px;
+    }
+
+    .destacado{
+        gap: 6px;
+        flex: 1;
+    }
+
+    .card{
+        width: calc((100% - 12px) / 3);
+        min-width: 0;
+    }
+
+    .card-img-top{
+        height: 160px;
+    }
+
+
+/*
+    .contenedorDestacado{
         gap: 8px;
         width: 100%;
     }
@@ -479,7 +499,7 @@ margin: 3px;
    .card-img-top{
     height: 140px;
 }
-
+*/
     .card h5{
         font-size: 0.9rem;
     }

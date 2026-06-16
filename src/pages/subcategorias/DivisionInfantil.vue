@@ -22,7 +22,7 @@ import Header from '../../components/Header.vue';
   <img src="../subcategorias/referencia2/Niña.jpeg" alt="producto">
 
   <div class="contenido">
-    <h3>Infantil Niño</h3>
+    <h3>INFANTIL NIÑO</h3>
   </div>
 
     <router-link class="btn" :to="{name: 'nino'}">
@@ -34,7 +34,7 @@ import Header from '../../components/Header.vue';
   <img src="../subcategorias/referencia2/Niño.jpeg" alt="producto">
 
   <div class="contenido">
-    <h3>Infantil Niña</h3>
+    <h3>INFANTIL NIÑA</h3>
   </div>
 
   <router-link class="btn" :to="{name: 'nina'}">
@@ -124,9 +124,7 @@ flex-direction: column;
 }
 
 .contenido h3{
-  background: linear-gradient(90deg, #ff3c00, #ffb700);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  color: #d6281e;
    font-weight: bold;
   font-size:1.5rem;
   margin:0;
@@ -144,8 +142,8 @@ flex-direction: column;
   border:none;
   border-radius:50%;
 
-  background:rgba(255, 196, 0, 0.15);
-  color:#d4af37;
+  background: #0f0f0f;
+  color: #d6281e;
 
   font-size:1.5rem;
   cursor:pointer;
@@ -206,7 +204,7 @@ flex-direction: column;
 }
 
 .contenido h3{
-  color:white;
+  color: #d6281e;
   font-size:1.2rem;
   margin:0;
   font-weight:700;
@@ -223,8 +221,8 @@ flex-direction: column;
   border:none;
   border-radius:50%;
 
-  background:rgba(255, 196, 0, 0.15);
-  color:#d4af37;
+  background: #0f0f0f;
+  color: #d6281e;
  margin:0;
  flex-shrink:0;
   font-size:1.5rem;
