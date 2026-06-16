@@ -3,8 +3,8 @@
 const slides = [
     {
         etiqueta: 'Visítanos',
-        titulo: 'Calzado que combina estilo y comodidad',
-        descripcion: 'Descubre nuestros modelos más destacados. Calidad, diseño y confort para cada ocasión.',
+        titulo: 'DESCUBRE NUESTRO ALMACEN DE PALMIRA CON CALZADO UNICO',
+        descripcion: 'Encuentranos en la direccion Cl. 30 #24-69 y deslumbrate con nuestro calzado premiun',
         imagen: '/img/almacen.jpeg',
         alt: 'Almacén Punto del Calzado',
         textoBoton: 'Ver catálogo',
@@ -13,8 +13,8 @@ const slides = [
 
     {
         etiqueta: 'Elegancia',
-        titulo: 'Diseños modernos para cada ocasión',
-        descripcion: 'Encuentra modelos que resaltan tu estilo sin sacrificar comodidad.',
+        titulo: 'DISEÑOS MODERNOS PARA CADA OCASION',
+        descripcion: 'Compra nuestros modelos que resaltan tu estilo sin sacrificar comodidad.',
         imagen: '/img/zapatoReferencia1.jpeg',
         alt: 'Zapato elegante',
         textoBoton: 'Explorar',
@@ -23,7 +23,7 @@ const slides = [
 
     {
         etiqueta: 'Calidad premium',
-        titulo: 'Calzado que combina estilo y comodidad',
+        titulo: 'CALZADO QUE COMBINA ESTILO Y COMODIDAD',
         descripcion: 'Descubre nuestros modelos más destacados. Calidad, diseño y confort para cada ocasión.',
         imagen: '/img/zapatoReferencia2.jpeg',
         alt: 'Zapato premium',
@@ -82,12 +82,12 @@ const slides = [
 
                             <a
                                 v-if="slide.whatsapp"
-                                href="https://wa.me/573001234567"
+                                href="#Ubicacion"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="btnWhatsapp"
                             >
-                                Pedir por WhatsApp
+                                Ubicacion
                             </a>
 
                         </div>

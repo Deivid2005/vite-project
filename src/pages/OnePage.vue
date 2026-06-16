@@ -238,7 +238,7 @@ Explora nuestro catálogo y encuentra calidad, diseño y personalidad en cada de
 
 
 
-   <Ubicacion />
+   <Ubicacion id="Ubicacion"/>
 
  
  </main>

@@ -32,7 +32,7 @@
     height: 60px;
     padding: 12px;
     cursor: pointer;
-    background-color: black;
+    background-color: #25D366;
     fill: #f1f1f1;
     border-radius: 50%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
