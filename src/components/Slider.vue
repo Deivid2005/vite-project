@@ -3,7 +3,7 @@
 const slides = [
     {
         etiqueta: 'Visítanos',
-        titulo: 'DESCUBRE NUESTRO ALMACEN DE PALMIRA CON CALZADO UNICO',
+        titulo: 'DESCUBRE NUESTRO PUNTO DEL CALZADO PALMIRA CON CALZADO UNICO',
         descripcion: 'Encuentranos en la direccion Cl. 30 #24-69 y deslumbrate con nuestro calzado premiun',
         imagen: '/img/almacen.jpeg',
         alt: 'Almacén Punto del Calzado',

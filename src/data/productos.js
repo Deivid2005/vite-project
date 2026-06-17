@@ -33,17 +33,14 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/zapatosCaballero/1.png',
-                '/img/ejemplo.jpg',
-                '/img/ejemplo.jpg'
+                '/zapatosCaballero/1.png'
             ]
         },
 
         Cafe: {
             imagenes: [
-                '/img/zapatoReferencia1.jpeg',
-                '/img/zapatoReferencia1.jpeg',
-                '/img/zapatoReferencia1.jpeg'
+                '/zapatosCaballero/alt1.png'
+                
             ]
         }
     },
@@ -101,17 +98,13 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/2.png'
             ]
         },
 
         Cafe: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+                '/zapatosCaballero/alt2.png'
             ]
         }
     },
@@ -168,17 +161,13 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+           '/zapatosCaballero/3.png'
             ]
         },
 
         Cafe: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+            '/zapatosCaballero/alt3.png' 
             ]
         }
     },
@@ -206,8 +195,6 @@ export const productos = [
     {
         id: 4,
 
-        imagen: '/src/zapatosCaballero/4.png ',
-
         categoria: 'Deportivo',
 
         catalogo: 'Caballero',
@@ -234,11 +221,10 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/4.png'
+                
             ]
-        },
+        }
     },
 
         tallas: [
@@ -263,8 +249,6 @@ export const productos = [
     },
     {
         id: 5,
-
-        imagen: '/src/zapatosCaballero/5.png',
 
         categoria: 'Deportivo',
 
@@ -296,17 +280,13 @@ export const productos = [
         variantes: {
         Azul: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/5.png'
             ]
         },
 
         Negro: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+                '/zapatosCaballero/alt5.png'
             ]
         }
     },
@@ -334,8 +314,6 @@ export const productos = [
     {
         id: 6,
 
-        imagen: '/src/zapatosCaballero/6.png ',
-
         categoria: 'Deportivo',
 
         catalogo: 'Caballero',
@@ -360,11 +338,9 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/ejemplo.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/6.png'
             ]
-        },
+        }
 
     },
 
@@ -388,8 +364,6 @@ export const productos = [
     },
     {
         id: 7,
-
-        imagen: '/src/zapatosCaballero/7.png ',
 
         categoria: 'Clasico',
 
@@ -421,17 +395,13 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+               '/zapatosCaballero/7.png' 
             ]
         },
 
         Cafe: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+             '/zapatosCaballero/alt7.png'
             ]
         }
     },
@@ -456,8 +426,6 @@ export const productos = [
     },
     {
         id: 8,
-
-        imagen: '/src/zapatosCaballero/8.png ',
 
         categoria: 'Clasico',
 
@@ -488,17 +456,13 @@ export const productos = [
         variantes: {
         Miel: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/8.png'
             ]
         },
 
         Negro: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+               '/zapatosCaballero/alt8.png' 
             ]
         }
     },
@@ -523,8 +487,6 @@ export const productos = [
     },
     {
         id: 9,
-
-        imagen: '/src/zapatosCaballero/9.png ',
 
         categoria: 'Clasico',
 
@@ -556,17 +518,13 @@ export const productos = [
         variantes: {
         Negro: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+              '/zapatosCaballero/9.png'  
             ]
         },
 
         Miel: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+              '/zapatosCaballero/alt9.png'
             ]
         }
     },
@@ -591,8 +549,6 @@ export const productos = [
     },
     {
         id: 10,
-
-        imagen: '/src/zapatosCaballero/10.png ',
 
         categoria: 'Botas',
 
@@ -624,17 +580,13 @@ export const productos = [
         variantes: {
         Almendra: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/10.png'
             ]
         },
 
         Negro: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+                '/zapatosCaballero/alt10.png'
             ]
         }
     },
@@ -660,8 +612,6 @@ export const productos = [
         {
         id: 11,
 
-        imagen: '/src/zapatosCaballero/11.png',
-
         categoria: 'Botas',
 
         catalogo: 'Caballero',
@@ -683,7 +633,7 @@ export const productos = [
 
             Cafe:{
                 color: '#000000',
-                imagen: '/zapatosCaballero/alt1.png'
+                imagen: '/zapatosCaballero/alt11.png'
             }
         } ,
 
@@ -691,17 +641,13 @@ export const productos = [
         variantes: {
         Talco: {
             imagenes: [
-                '/img/negro1.jpg',
-                '/img/negro2.jpg',
-                '/img/negro3.jpg'
+                '/zapatosCaballero/11.png'
             ]
         },
 
         Negro: {
             imagenes: [
-                '/img/rojo1.jpg',
-                '/img/rojo2.jpg',
-                '/img/rojo3.jpg'
+                '/zapatosCaballero/alt11.png'
             ]
         }
     },
