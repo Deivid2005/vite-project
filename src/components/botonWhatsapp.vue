@@ -4,13 +4,13 @@ const mensajeCatalogo = encodeURIComponent(
 
 `Hola, me gustaría recibir información sobre:
 
-👟 Modelos disponibles
-📏 Tallas
-🎨 Colores
-💰 Precios
-🚚 Opciones de envío
+1- Modelos disponibles
+2- Tallas
+3- Colores
+4- Precios
+5- Opciones de envío
 
-📍 Catálogo visitado:
+Catálogo visitado:
 ${window.location.href}
 
 Quedo atento(a) a su respuesta.

@@ -67,27 +67,23 @@ const mensajeWhatsapp = computed(() => {
 
 `👋 Hola, me gustaría solicitar información sobre el siguiente producto de Punto del Calzado.
 
-📦 DATOS DEL PRODUCTO
+*DATOS DEL PRODUCTO*
 
-🆔 Referencia: ${producto.id}
-📂 Categoría: ${producto.categoria}
-🎨 Color seleccionado: ${colorSeleccionado.value}
-👟 Talla seleccionada: ${tallaSeleccionada.value}
-💰 Precio: $${producto.precio.toLocaleString()}
+Referencia: ${producto.id}
+Categoría: ${producto.categoria}
+Color seleccionado: ${colorSeleccionado.value}
+Talla seleccionada: ${tallaSeleccionada.value}
+Precio: $${producto.precio.toLocaleString()}
 
-📝 DESCRIPCIÓN
-
-${producto.descripcion}
-
-🔍 REFERENCIA VISUAL
+*REFERENCIA VISUAL*
 
 ${window.location.origin}${imagenActual.value}
 
-🌐 ENLACE DEL PRODUCTO
+*ENLACE DEL PRODUCTO*
 
 ${window.location.origin}/producto/${producto.id}
 
-📲 Quedo atento a información sobre disponibilidad, formas de pago, tiempo de entrega y proceso de compra.
+Quedo atento a información sobre disponibilidad, formas de pago, tiempo de entrega y proceso de compra.
 
 Muchas gracias.`
     )
@@ -309,6 +305,8 @@ Muchas gracias.`
     :disabled="!tallaSeleccionada"
 
     @click="irWhatsapp"
+
+    :href="`https://wa.me/573164616364?text=${mensajeWhatsapp}`"
 
 
 
