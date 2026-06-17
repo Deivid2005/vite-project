@@ -3,8 +3,8 @@
 const slides = [
     {
         etiqueta: 'Visítanos',
-        titulo: 'DESCUBRE NUESTRO PUNTO DEL CALZADO PALMIRA CON CALZADO UNICO',
-        descripcion: 'Encuentranos en la direccion Cl. 30 #24-69 y deslumbrate con nuestro calzado premiun',
+        titulo: 'BIENVENIDOS AL PUNTO DEL CALZADO PALMIRA',
+        descripcion: 'Encuentranos en la Cl. 30 #24-69 y deslumbrate con nuestro calzado 100% colombiano',
         imagen: '/img/almacen.jpeg',
         alt: 'Almacén Punto del Calzado',
         textoBoton: 'Ver catálogo',
@@ -14,7 +14,7 @@ const slides = [
     {
         etiqueta: 'Elegancia',
         titulo: 'DISEÑOS MODERNOS PARA CADA OCASION',
-        descripcion: 'Compra nuestros modelos que resaltan tu estilo sin sacrificar comodidad.',
+        descripcion: 'Con nuestros modelos que resaltan tu estilo sin sacrificar comodidad.',
         imagen: '/img/zapatoReferencia1.jpeg',
         alt: 'Zapato elegante',
         textoBoton: 'Explorar',

@@ -1,10 +1,10 @@
 <template>
   <section class="location-section">
     <div class="info">
-      <h2>NUESTRA UBICACION</h2>
+      <h2>UBICACION</h2>
 
       <p>
-        Visita nuestro almacén y conoce todos nuestros productos.
+        Visita nuestro almacén y conoce nuestros productos.
       </p>
 
     </div>

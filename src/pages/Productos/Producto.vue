@@ -529,8 +529,8 @@ Muchas gracias.`
     width: 85%;
     max-width: 500px;
     height: 60px;
-    background: #000;
-    color: #d4af37;
+    background: #25D366;
+    color: #f1f1f1;
     text-decoration: none;
     display: flex;
     justify-content: center;
