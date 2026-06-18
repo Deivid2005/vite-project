@@ -240,6 +240,7 @@ const slides = [
     margin-bottom: 20px;
 }
 
+/*
 .heroText h1{
     font-size: 4rem;
     line-height: 1.1;
@@ -250,6 +251,15 @@ const slides = [
 
     margin-bottom: 20px;
 }
+    */
+
+   .heroText h1{
+    font-size: 3.3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #D6281E;
+    margin-bottom: 20px;
+} 
 
 .heroText p{
     max-width: 600px;

@@ -275,23 +275,6 @@ Muchas gracias.`
 
                 </div>
 
-                <!-- CARACTERÍSTICAS -->
-                <div class="productFeatures">
-
-                    <h3>Características</h3>
-
-                <ul>
-
-                   <li
-                       v-for="caracteristica in producto.caracteristicas"
-                       :key="caracteristica"
-                     >
-                     {{ caracteristica }}
-                   </li>
-
-                </ul>
-
-                </div>
 
             </section>
 
@@ -435,7 +418,7 @@ Muchas gracias.`
 }
 
 .color-btn.active{
-    border-color: #d4af37;
+    border-color: #c62828;
 }
 
 .black{
@@ -477,12 +460,12 @@ Muchas gracias.`
 }
 
 .size-btn:hover{
-    border-color: #d4af37;
+    border-color: #c62828;
     transform: translateY(-2px);
 }
 
 .size-btn.active{
-    background: #d4af37;
+    background: #c62828;
     color: #f8f8f8;
     font-weight: bold;
 }
