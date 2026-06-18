@@ -125,7 +125,7 @@ const anterior = () => {
 
  <main>
 
-  <h1 class="titleDestacado">DESTACADO</h1>
+  <h1 class="titleDestacado" id="Destacados">DESTACADO</h1>
 
 <section class="contenedorDestacado">
 
@@ -133,7 +133,7 @@ const anterior = () => {
     ❮
   </button>
 
-  <section class="destacado">
+  <section class="destacado" >
 
 
     <div

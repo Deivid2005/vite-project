@@ -11,10 +11,7 @@ const mensajeCatalogo = encodeURIComponent(
 5- Opciones de envío
 
 Catálogo visitado:
-${window.location.href}
-
-Quedo atento(a) a su respuesta.
-Muchas gracias.`
+${window.location.href}`
 
 )
 

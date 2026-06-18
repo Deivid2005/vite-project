@@ -8,27 +8,34 @@ const slides = [
         imagen: '/img/almacen.jpeg',
         alt: 'Almacén Punto del Calzado',
         textoBoton: 'Ver catálogo',
-        whatsapp: true
+        whatsapp: true,
+        textoCatalogo : true,
+        Destacado: false
     },
 
     {
         etiqueta: 'Elegancia',
         titulo: 'DISEÑOS MODERNOS PARA CADA OCASION',
         descripcion: 'Con nuestros modelos que resaltan tu estilo sin sacrificar comodidad.',
-        imagen: '/img/zapatoReferencia1.jpeg',
+        imagen: '/img/slider3.png',
         alt: 'Zapato elegante',
         textoBoton: 'Explorar',
-        whatsapp: false
+        whatsapp: false,
+         textoCatalogo : true,
+         Destacado: false
     },
 
     {
         etiqueta: 'Calidad premium',
         titulo: 'CALZADO QUE COMBINA ESTILO Y COMODIDAD',
         descripcion: 'Descubre nuestros modelos más destacados. Calidad, diseño y confort para cada ocasión.',
-        imagen: '/img/zapatoReferencia2.jpeg',
+        imagen: '/img/slider5.jpeg',
         alt: 'Zapato premium',
-        textoBoton: 'Ver productos',
-        whatsapp: false
+        textoBoton: "Ver productos",
+        whatsapp: false,
+         textoCatalogo : false,
+         Destacado: true
+        
     }
 ]
 
@@ -74,11 +81,24 @@ const slides = [
                         <div class="heroBotones">
 
                             <router-link
+                                v-if="slide.textoCatalogo"
                                 :to="{ name: 'catalogo' }"
                                 class="btnCatalogo"
                             >
                                 {{ slide.textoBoton }}
                             </router-link>
+
+                            <a 
+                            v-if="slide.Destacado"
+                            href="#Destacados"
+                            target="_blank"
+                            rel="nooper noreferrer"
+                            class="btnCatalogo"
+                            >
+                         Destacados
+                        </a>
+                            
+
 
                             <a
                                 v-if="slide.whatsapp"
