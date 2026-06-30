@@ -2,7 +2,11 @@
 <template>
 
     <header>
+        <router-link :to= "{
+            name: 'principal'
+        }" >
         <img class="logo" src="/img/logo2.png" alt="logo">
+        </router-link>
     </header>
 
 
