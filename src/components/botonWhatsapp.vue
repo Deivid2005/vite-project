@@ -22,7 +22,7 @@ ${window.location.href}`
 
 <a
 
-   :href="`https://wa.me/573164616364?text=${mensajeCatalogo}`"
+   :href="`https://wa.me/573175024502?text=${mensajeCatalogo}`"
 
    class="whatsapp-float"
 

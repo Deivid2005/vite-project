@@ -43,7 +43,7 @@ const irWhatsapp = () => {
 
     window.open(
 
-        `https://wa.me/573174209327?text=${mensajeWhatsapp.value}`,
+        `https://wa.me/573175024502?text=${mensajeWhatsapp.value}`,
 
         '_blank'
     )
@@ -69,7 +69,6 @@ const mensajeWhatsapp = computed(() => {
 
 *DATOS DEL PRODUCTO*
 
-Referencia: ${producto.id}
 Categoría: ${producto.categoria}
 Color seleccionado: ${colorSeleccionado.value}
 Talla seleccionada: ${tallaSeleccionada.value}
@@ -223,12 +222,7 @@ ${window.location.origin}/producto/${producto.id}
                 </div>
 
 
-
-                <!-- DESCRIPCIÓN -->
-                <p class="productDescription">
-                 {{ producto.descripcion }}
-                </p>
-
+                <!--descripcion invalitada de momento--> 
 
                 <!-- TALLAS -->
                 <div class="productSizes">
@@ -283,7 +277,7 @@ ${window.location.origin}/producto/${producto.id}
 
     @click="irWhatsapp"
 
-    :href="`https://wa.me/573164616364?text=${mensajeWhatsapp}`"
+    :href="`https://wa.me/573175024502?text=${mensajeWhatsapp}`"
 
 
 
@@ -308,6 +302,10 @@ ${window.location.origin}/producto/${producto.id}
 
 <style scoped>
 
+
+
+/* <p class="productDescription"> {{ producto.descripcion }}</p> */
+
 .layout{
     margin: 0;
     padding: 0;
@@ -315,20 +313,19 @@ ${window.location.origin}/producto/${producto.id}
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-
+    background: #fafafa;
 }
 
-.main{
+main{
     flex: 1;
 }
 
-
 /* CONTENEDOR GENERAL */
 .producto-container{
-    width: 90%;
+    width: min(1200px, 90%);
     margin: 40px auto 120px;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: flex-start;
 }
 
@@ -339,18 +336,24 @@ ${window.location.origin}/producto/${producto.id}
 
 /* CARRUSEL */
 .carousel{
-    border-radius: 25px;
+    border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
 }
 
 .carousel-item img{
     width: 100%;
     height: 650px;
     object-fit: cover;
+    transition: transform .3s ease;
 }
 
-/* INFO */
+.carousel-item img:hover{
+    transform: scale(1.02);
+}
+
+/* INFORMACIÓN */
 .productInfo{
     flex: 1;
     color: #1a1a1a;
@@ -363,7 +366,7 @@ ${window.location.origin}/producto/${producto.id}
     margin-bottom: 10px;
 }
 
-/* NOMBRE */
+/* NOMBRE (por si algún día decides usarlo) */
 .productName{
     color: #d4af37;
     font-size: 2.5rem;
@@ -374,9 +377,9 @@ ${window.location.origin}/producto/${producto.id}
 /* PRECIO */
 .productPrice{
     color: #c62828;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 /* LABELS */
@@ -390,29 +393,29 @@ ${window.location.origin}/producto/${producto.id}
 
 /* COLORES */
 .productColors{
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .colors{
     display: flex;
-    gap: 12px;
+    gap: 14px;
 }
 
 .color-btn{
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: .2s ease;
+    transition: .25s ease;
 }
 
 .color-btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .color-btn.active{
-    border-color: #c62828;
+    border: 3px solid #c62828;
 }
 
 .black{
@@ -427,12 +430,12 @@ ${window.location.origin}/producto/${producto.id}
 .productDescription{
     color: black;
     line-height: 1.8;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 /* TALLAS */
 .productSizes{
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 .tamaño{
@@ -442,7 +445,7 @@ ${window.location.origin}/producto/${producto.id}
 }
 
 .size-btn{
-    min-width: 55px;
+    min-width: 58px;
     height: 48px;
     border-radius: 12px;
     border: 1px solid #333;
@@ -450,7 +453,7 @@ ${window.location.origin}/producto/${producto.id}
     color: #f8f8f8;
     font-size: 1rem;
     cursor: pointer;
-    transition: .2s ease;
+    transition: .25s ease;
 }
 
 .size-btn:hover{
@@ -460,6 +463,7 @@ ${window.location.origin}/producto/${producto.id}
 
 .size-btn.active{
     background: #c62828;
+    border-color: #c62828;
     color: #f8f8f8;
     font-weight: bold;
 }
@@ -470,6 +474,14 @@ ${window.location.origin}/producto/${producto.id}
     flex-direction: column;
     gap: 12px;
     margin-bottom: 35px;
+    padding: 18px;
+    background: #fafafa;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+}
+
+.productStatus p{
+    margin: 0;
     color: black;
 }
 
@@ -508,20 +520,18 @@ ${window.location.origin}/producto/${producto.id}
     height: 60px;
     background: #25D366;
     color: #f1f1f1;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: none;
     border-radius: 18px;
     font-weight: bold;
     font-size: 1.1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
-    transition: .2s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    transition: .25s ease;
 }
 
 .whatsapp-btn:hover{
     transform: translateX(-50%) translateY(-2px);
-    box-shadow: 0 10px 25px rgba(212,175,55,.25);
+    box-shadow: 0 10px 25px rgba(37,211,102,.35);
 }
 
 .whatsapp-btn:disabled{
@@ -533,12 +543,12 @@ ${window.location.origin}/producto/${producto.id}
 @media(max-width: 768px){
 
     .producto-container{
-       flex-direction: column;
+        flex-direction: column;
+        gap: 35px;
     }
 
     .carousel-item img{
-        height: 50%;
-     
+        height: 420px;
     }
 
     .productName{
@@ -546,9 +556,13 @@ ${window.location.origin}/producto/${producto.id}
     }
 
     .productPrice{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
-}
 
+    .whatsapp-btn{
+        width: 92%;
+    }
+
+}
 
 </style>
